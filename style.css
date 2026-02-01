@@ -1,0 +1,69 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --card: #f0f0f0;
+}
+
+.dark {
+  --bg: #121212;
+  --text: #ffffff;
+  --card: #1e1e1e;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hidden {
+  display: none;
+}
+
+#lockScreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#lockScreen input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#lockScreen button {
+  margin-top: 10px;
+}
+
+.app {
+  padding: 15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.entry {
+  background: var(--card);
+  padding: 8px;
+  margin-top: 6px;
+  border-radius: 6px;
+}
