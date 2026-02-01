@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Diary</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121212">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🔒 LOCK SCREEN -->
+<div id="lockScreen">
+  <h2>🔒 Enter PIN</h2>
+  <input type="password" id="pinInput" placeholder="Enter PIN">
+  <button onclick="unlock()">Unlock</button>
+</div>
+
+<!-- 📖 APP -->
+<div id="app" class="hidden">
+  <header>
+    <h1>📖 My Diary</h1>
+    <button onclick="toggleTheme()">🌙</button>
+  </header>
+
+  <input type="date" id="datePicker">
+
+  <textarea id="entry" placeholder="Write your thoughts..."></textarea>
+
+  <div class="ai-toggle">
+    <input type="checkbox" id="aiToggle">
+    <label>AI Writing Prompt</label>
+  </div>
+
+  <p id="aiPrompt"></p>
+
+  <button onclick="saveEntry()">Save Entry</button>
+
+  <h3>Past Entries</h3>
+  <div id="entries"></div>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
+
+</body>
+</html>
